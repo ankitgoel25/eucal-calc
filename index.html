@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calculator</title>
+    <style>
+      * {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Eucalyptus Plantation Calculator</h1>
+    <form
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+      "
+    >
+      <div>
+        <label for="acres">Area of land in acres</label>
+        <input type="number" name="acres" id="acres" min="1" value="1" />
+      </div>
+      <div>
+        <label for="trees">No. of trees per acre</label>
+        <input type="number" name="trees" id="trees" value="2500" />
+      </div>
+      <div>
+        <label for="seedPrice">Market price of tree seed per tree</label>
+        <input type="number" name="seedPrice" id="seedPrice" value="18" />
+      </div>
+      <div>
+        <label for="discount">Discount on tree seed per tree</label>
+        <input type="number" name="discount" id="discount" value="8" />
+      </div>
+      <div>
+        <label for="spTree">Selling Price per Tree</label>
+        <input type="number" name="spTree" id="spTree" value="300" />
+      </div>
+      <button type="submit">Calculate</button>
+      <div id="result">
+        <p>Final Cost of tree seed per tree is</p>
+      </div>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
