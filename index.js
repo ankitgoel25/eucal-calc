@@ -11,13 +11,15 @@ form.addEventListener('submit', (e) => {
   const finalCost = seedPrice.value - discount.value;
 
   const html = `
-        <p>Total number of trees in ${acres.value} acres of land is <b>${
-    acres.value * trees.value
-  }</b> trees</p>
+        <p>Total number of trees in ${
+          acres.value
+        } acres of land is <b>${new Intl.NumberFormat('en-IN').format(
+    acres.value * trees.value,
+  )}</b> trees</p>
         <p>Final Cost of tree seed per tree is <b>₹ ${finalCost}</b></p>
         <p>Total farmer's investment is <b>₹ ${new Intl.NumberFormat(
           'en-IN',
-        ).format(finalCost * trees.value)}</b></p>
+        ).format(finalCost * trees.value * acres.value)}</b></p>
         <p>Farmer's total earning in 3-4 years is <b>₹ ${new Intl.NumberFormat(
           'en-IN',
         ).format(trees.value * acres.value * spTree.value)}</b></p>
